@@ -4,7 +4,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$db_name = "crud";
+$db_name = "gerenciador_de_tarefas";
 
 // criando uma nova conexão 
 $conn = new mysqli($servername, $username, $password, $db_name);

@@ -2,9 +2,9 @@
 include 'config.php';
 
 if(isset($_GET['id'])){
-    $id = $_GET['id'];
-    $sql = "SELECT * FROM pessoas WHERE id=$id";
-    $result = $conn->query($sql);
+    $idUser = $_GET['id'];
+    $userInsert = "SELECT * FROM pessoas WHERE id=$idUser";
+    $result = $conn->query($username);
     $row = $result->fetch_assoc(); //obtem os dados do registro
 }
 ?>
@@ -27,12 +27,12 @@ if(isset($_GET['id'])){
             <input type="text" name="nome" class="form-control" id="nome" value="<?php echo $row['nome']; ?>" required>  <!-- Campo para o nome -->
         </div>
         <div class="form-group">
-            <label for="sobrenome">Sobrenome</label>
-            <input type="text" name="sobrenome" class="form-control" id="sobrenome" value="<?php echo $row['sobrenome']; ?>" required>  <!-- Campo para o sobrenome -->
+            <label for="email">Sobrenome</label>
+            <input type="text" name="email" class="form-control" id="email" value="<?php echo $row['email']; ?>" required>  <!-- Campo para o sobrenome -->
         </div>
         <div class="form-group">
             <label for="telefone">Telefone</label>
-            <input type="text" name="telefone" class="form-control" id="telefone" value="<?php echo $row['telefone']; ?>" required>  <!-- Campo para o telefone -->
+            <input type="text" name="vargo" class="form-control" id="cargo" value="<?php echo $row['cargo']; ?>" required>  <!-- Campo para o telefone -->
         </div>
         <button type="submit" class="btn btn-primary">Atualizar</button>  <!-- Botão para enviar o formulário -->
     </form>
